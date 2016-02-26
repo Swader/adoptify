@@ -141,26 +141,103 @@ footer .puppy img {
     padding: 0 10px 10px;
 }
 
-.masthead.sad00 {
-    background-image: url('/static/image/sad01-320.jpeg');
+@media (max-width: 320px) {
+    .masthead.sad00 {
+        background-image: url('/static/image/sad01-320.jpeg');
+    }
+    .masthead.sad01 {
+        background-image: url('/static/image/sad02-320.jpeg');
+    }
+    .masthead.sad02 {
+        background-image: url('/static/image/sad03-320.jpeg');
+    }
+    .masthead.sad03 {
+        background-image: url('/static/image/sad04-320.jpeg');
+    }
+    .masthead.sad04 {
+        background-image: url('/static/image/sad05-320.jpeg');
+    }
+    .masthead.sad05 {
+        background-image: url('/static/image/sad06-320.jpeg');
+    }
 }
-
-.masthead.sad01 {
-    background-image: url('/static/image/sad02-320.jpeg');
+@media (max-width: 770px) {
+    .masthead.sad00 {
+        background-image: url('/static/image/sad01-770.jpeg');
+    }
+    .masthead.sad01 {
+        background-image: url('/static/image/sad02-770.jpeg');
+    }
+    .masthead.sad02 {
+        background-image: url('/static/image/sad03-770.jpeg');
+    }
+    .masthead.sad03 {
+        background-image: url('/static/image/sad04-770.jpeg');
+    }
+    .masthead.sad04 {
+        background-image: url('/static/image/sad05-770.jpeg');
+    }
+    .masthead.sad05 {
+        background-image: url('/static/image/sad06-770.jpeg');
+    }
 }
-
-.masthead.sad02 {
-    background-image: url('/static/image/sad03-320.jpeg');
+@media (max-width: 992px) {
+    .masthead.sad00 {
+        background-image: url('/static/image/sad01-992.jpeg');
+    }
+    .masthead.sad01 {
+        background-image: url('/static/image/sad02-992.jpeg');
+    }
+    .masthead.sad02 {
+        background-image: url('/static/image/sad03-992.jpeg');
+    }
+    .masthead.sad03 {
+        background-image: url('/static/image/sad04-992.jpeg');
+    }
+    .masthead.sad04 {
+        background-image: url('/static/image/sad05-992.jpeg');
+    }
+    .masthead.sad05 {
+        background-image: url('/static/image/sad06-992.jpeg');
+    }
 }
-
-.masthead.sad03 {
-    background-image: url('/static/image/sad04-320.jpeg');
+@media (max-width: 1280px) {
+    .masthead.sad00 {
+        background-image: url('/static/image/sad01-1280.jpeg');
+    }
+    .masthead.sad01 {
+        background-image: url('/static/image/sad02-1280.jpeg');
+    }
+    .masthead.sad02 {
+        background-image: url('/static/image/sad03-1280.jpeg');
+    }
+    .masthead.sad03 {
+        background-image: url('/static/image/sad04-1280.jpeg');
+    }
+    .masthead.sad04 {
+        background-image: url('/static/image/sad05-1280.jpeg');
+    }
+    .masthead.sad05 {
+        background-image: url('/static/image/sad06-1280.jpeg');
+    }
 }
-
-.masthead.sad04 {
-    background-image: url('/static/image/sad05-320.jpeg');
-}
-
-.masthead.sad05 {
-    background-image: url('/static/image/sad06-320.jpeg');
+@media (max-width: 1920px) {
+    .masthead.sad00 {
+        background-image: url('/static/image/sad01-1920.jpeg');
+    }
+    .masthead.sad01 {
+        background-image: url('/static/image/sad02-1920.jpeg');
+    }
+    .masthead.sad02 {
+        background-image: url('/static/image/sad03-1920.jpeg');
+    }
+    .masthead.sad03 {
+        background-image: url('/static/image/sad04-1920.jpeg');
+    }
+    .masthead.sad04 {
+        background-image: url('/static/image/sad05-1920.jpeg');
+    }
+    .masthead.sad05 {
+        background-image: url('/static/image/sad06-1920.jpeg');
+    }
 }

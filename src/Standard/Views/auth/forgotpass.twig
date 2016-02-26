@@ -1,0 +1,22 @@
+{% extends 'layout/master.twig' %}
+
+{% block content %}
+<h1>Forgot your password?</h1>
+<p>Enter your email below and we'll send you password reset instructions.</p>
+
+
+
+    <form class="ui medium form" method="post" action="">
+        <div class="ui stacked segment">
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input type="email" required="required" name="email" placeholder="E-mail address" style="cursor: auto;">
+                </div>
+            </div>
+
+            <button class="ui button fluid large teal submit" type="submit">Submit</button>
+        </div>
+    </form>
+
+{% endblock %}

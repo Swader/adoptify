@@ -1,0 +1,33 @@
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+    <div class="ui container">
+
+        {% for link, label in menus.left %}
+            <a href="{{ link }}" class="item">{{ label }}</a>
+        {% endfor %}
+
+        {% if menus.right %}
+            <div class="right menu">
+                {% for link, label in menus.right %}
+                    <a href="{{ link }}" class="item">{{ label }}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+
+
+    {% for link, label in menus.left %}
+        <a href="{{ link }}" class="item">{{ label }}</a>
+    {% endfor %}
+
+    {% if menus.right %}
+        {% for link, label in menus.right %}
+            <a href="{{ link }}" class="item">{{ label }}</a>
+        {% endfor %}
+    {% endif %}
+
+</div>

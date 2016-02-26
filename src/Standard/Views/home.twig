@@ -1,0 +1,17 @@
+{% extends 'layout/master.twig' %}
+
+{% block content %}
+
+    <h1>NOFW skeleton app</h1>
+
+    <p>Welcome!</p>
+
+    <p>This is a highly configurable skeleton app with dependency injection, user authentication and authorization, templating, flash messages, and more. It's a no-framework framework, in a way. For details, please see the
+        <a href="https://github.com/swader/nofw">README</a>.</p>
+
+    {% if username == null %}
+        <p>To sign up / log in, please go <a href="/auth">here</a>.</p>
+    {% endif %}
+
+
+{% endblock %}

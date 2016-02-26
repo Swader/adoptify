@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <link rel="stylesheet" href="/dist/css/app.dev.css"/>
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+
+{% include "partials/header.twig" %}
+
+<div class="pusher">
+    <div class="ui container masthead sad0{{ random(5) }} inverted">
+        <div class="ui large secondary pointing menu inverted">
+            <a class="toc item">
+                <i class="sidebar icon"></i>
+            </a>
+
+            {% for link, label in menus.left %}
+                {% if link == menus.active %}
+                    {% set class = 'active' %}
+                {% else %}
+                    {% set class = '' %}
+                {% endif %}
+                <a href="{{ link }}" class="item {{ class }}">{{ label }}</a>
+            {% endfor %}
+
+            {% if menus.right %}
+                <div class="right menu">
+                    {% for link, label in menus.right %}
+                        <a href="{{ link }}" class="item">{{ label }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        {% include "partials/masthead.twig" %}
+        {% if (flashes) %}{{ flashes|raw }}{% endif %}
+    </div>
+
+    <div id="content"
+         class="ui container">{% block content %}{% endblock %}</div>
+
+    <footer id="footer" class="ui container items">
+
+        <div class="item">
+
+            <div class="image puppy">
+                <img src="/static/image/rita01.jpg" width="150" height="150"
+                     alt="Rita the beagle">
+            </div>
+            <div class="content">
+                <div class="header">Adopt a pet - save a life</div>
+                <div class="description">
+                    <p>It is said there are only two types of unconiditional love: the love of a mother towards a child, and the love of a dog for its owners. By adopting a pet, you not only save a life, you gain a friend, a family member, and a lifetime of precious memories.</p>
+                </div>
+                <div class="extra">
+                    <p>
+                        <a href="/auth">Log in or register</a> today to find a buddy
+                    </p>
+                    <p>&copy; Copyright 2016 by <a
+                                href="https://twitter.com/bitfalls">@bitfalls</a>, powered by
+                        <a href="http://diffbot.com">Diffbot</a>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</div>
+
+<script src="/dist/js/app.dev.js"></script>
+</body>
+</html>

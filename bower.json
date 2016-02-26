@@ -1,0 +1,11 @@
+{
+    "name": "adoptify",
+    "authors": [
+        "Beelab <info@bee-lab.net>",
+        "Bruno Skvorc"
+    ],
+    "private": true,
+    "dependencies": {
+        "semantic": "*"
+    }
+}

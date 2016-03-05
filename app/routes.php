@@ -29,6 +29,7 @@ return [
 
     ['GET', '/account', 'Standard\Controllers\AccountController'],
     ['GET', '/account/index', ['Standard\Controllers\AccountController', 'indexAction']],
+    ['POST', '/account/save', ['Standard\Controllers\AccountController', 'saveAction']],
 
     ['GET', '/about', ['Standard\Controllers\HomeController', 'about']],
 

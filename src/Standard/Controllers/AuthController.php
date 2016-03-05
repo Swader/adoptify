@@ -20,12 +20,6 @@ class AuthController extends Controller
     private $twig;
 
     /**
-     * @Inject
-     * @var Flash
-     */
-    private $flasher;
-
-    /**
      * @Inject("mailgun-config")
      */
     private $mailgun_config;

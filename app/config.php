@@ -63,7 +63,7 @@ return [
             '/' => 'Home',
             '/find' => 'Find a buddy',
             '/post' => 'Post an ad',
-            '/about' => 'About',
+            '/about' => 'About / FAQ',
         ];
 
         if ($shared['user']) {

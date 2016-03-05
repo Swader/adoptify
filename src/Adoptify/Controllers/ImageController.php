@@ -15,6 +15,7 @@ class ImageController extends Controller
 
     private $allowedWidths = [
         320,
+        460,
         768,
         992,
         1280,
@@ -53,7 +54,7 @@ class ImageController extends Controller
             header(
                 ($_SERVER['SERVER_PROTOCOL'] ?? 'HTTP/1.0') . ' 500 ' . 'Server Error ImgErr01'
             );
-            die("Nope! Disallowed width.");
+            die("Nope! Disallowed width: ".$width." for image ".$imagePath);
         }
 
         return $width;

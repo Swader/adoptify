@@ -30,6 +30,8 @@ return [
     ['GET', '/account', 'Standard\Controllers\AccountController'],
     ['GET', '/account/index', ['Standard\Controllers\AccountController', 'indexAction']],
 
+    ['GET', '/about', ['Standard\Controllers\HomeController', 'about']],
+
     ['GET', '/static/image/{image}', ['Adoptify\Controllers\ImageController', 'renderImage']]
 
 ];

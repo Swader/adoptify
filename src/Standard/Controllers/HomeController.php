@@ -30,4 +30,9 @@ class HomeController
             'message' => $message,
         ]);
     }
+
+    public function about()
+    {
+        echo $this->twig->render('pages/about.twig');
+    }
 }

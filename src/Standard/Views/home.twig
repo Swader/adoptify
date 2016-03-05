@@ -2,16 +2,79 @@
 
 {% block content %}
 
-    <h1>NOFW skeleton app</h1>
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h3 class="ui header">Looking for a pet?</h3>
+                    <p>Don't buy pets - there are so many well behaved ones who need a new home; use our awesome filtered search to sort by species, subspecies, training level, child friendliness, maintenance needs, location, even character traits!</p>
+                    <h3 class="ui header">Can't take care of Buddy any more?</h3>
+                    <p>We're here to help, not judge. We want what's best for our little friends, and understand that sometimes life gets in the way of keeping an animal companion. We're here to help you find a nice new home for them when yours is no longer fitting.</p>
+                </div>
+                <div class="six wide right floated column">
+                    <img src="/static/image/adoptme-768.jpg" class="ui large bordered rounded image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="center aligned column">
+                    <div class="ui large buttons">
+                        <button class="ui button big orange">Post an ad</button>
+                        <div class="or"></div>
+                        <button class="ui button big teal">Find a pet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <p>Welcome!</p>
+    <div class="ui vertical stripe segment">
+        <div class="ui text container">
+            <h3 class="ui header">Prevent Deaths</h3>
+            <img class="ui small left floated image" src="/static/image/main_death-320.png">
+            <p>Approximately 2.7 million animals are euthanized every year in the USA alone - most due to owner negligence or abandonment. Help us put a dent into this heartbreaking number.</p>
+            <h4 class="ui horizontal header divider"></h4>
+            <h3 class="ui header">Detailed info - when you need it</h3>
+            <img class="ui small right floated image" src="/static/image/diffbot-320.png">
+            <p>Powered by <a href="http://diffbot.com">Diffbot</a>'s AI, Adoptify tries to recognize the uploaded animals and provide additional context. With Adoptify, you'll know exactly what to expect from a potential adoptee.</p>
+            <h4 class="ui horizontal header divider"></h4>
+            <h3 class="ui header">Lifelong buddies</h3>
+            <img class="ui small left floated image" src="/static/image/lifelong-320.png">
+            <p>Besides providing you with a wealth of good memories and unconditional love, pets can help you in sports, home protection, programming (ask a programmer
+                <a href="https://www.quora.com/Why-are-programmers-obsessed-with-cats/answer/Bruno-Skvorc" target="_blank">about cats</a>!), establishing routines, even teaching your children responsibility and selfless care of other living beings.</p>
+        </div>
+    </div>
 
-    <p>This is a highly configurable skeleton app with dependency injection, user authentication and authorization, templating, flash messages, and more. It's a no-framework framework, in a way. For details, please see the
-        <a href="https://github.com/swader/nofw">README</a>.</p>
+    <div class="ui vertical stripe quote segment">
+        <div class="ui equal width stackable internally celled grid">
+            <div class="center aligned row">
+                <div class="column">
+                    <h3>"After our beagle got hit by a pick-up truck, we were devastated - especially the kids. Adoptify helped us fill this void."</h3>
+                    <p>Jane, stay-at-home mother of 3 from Topeka, Kansas</p>
+                </div>
+                <div class="column">
+                    <h3>"I got offered a big job in Australia, and couldn't bring my buddy Ares along. I sleep peacefully knowing he's in loving hands, and I make sure his new owners have everything they need to make life pleasant for him."</h3>
 
-    {% if username == null %}
-        <p>To sign up / log in, please go <a href="/auth">here</a>.</p>
-    {% endif %}
+                    <p>Willem, systems engineer from Dublin, Ireland</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="ui vertical stripe segment">
+        <div class="ui text container">
+            <h3 class="ui header">Sponsored Pets</h3>
+            <img class="ui small right floated image" src="/static/image/sponsored-320.png">
+            <p>In some cases, the owner loves the animal dearly, but simply cannot keep them, and will sometimes opt to keep funding (sponsoring) the pet's needs, from food to vet bills. That means all you have to provide is - quite literally - a home. Who could resist such an offer?</p>
+            <h4 class="ui horizontal header divider"></h4>
+            <h3 class="ui header">Community Support</h3>
+            <img class="ui small left floated image" src="/static/image/community-320.png">
+            <p>Our large community of current and past pet owners is at your disposal - just asking in our forums (coming soon!) will net you a wealth of useful experience-based responses. From housebreaking and command training, to advice on sturdy toys or leashes!</p>
+            <h4 class="ui horizontal header divider"></h4>
+            <h3 class="ui header">Search by Location</h3>
+            <img class="ui small right floated image" src="/static/image/location-320.png">
+            <p>Our unique system lets you filter pets by location. For example, finding sponsored pets near you, or long-unwanted pets in high traffic areas to save has never been easier!</p>
+        </div>
+    </div>
 
 {% endblock %}

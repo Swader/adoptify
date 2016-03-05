@@ -1,5 +1,9 @@
 /* Put your CSS here, and make sure it's built via assets.ini to have an effect */
 
+.pusher {
+    background: url('/static/image/pattern-460.png') repeat !important;
+}
+
 .hidden.menu {
     display: none;
 }
@@ -127,7 +131,7 @@ footer .puppy img {
 /*Masthead bg*/
 
 .masthead {
-    padding-bottom: 15px;
+
     background-size: cover;
 }
 
@@ -136,7 +140,7 @@ footer .puppy img {
 }
 
 .masthead .ui.text.container {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 0 10px 10px;
 }
@@ -240,4 +244,36 @@ footer .puppy img {
     .masthead.sad05 {
         background-image: url('/static/image/sad06-1920.jpeg');
     }
+}
+
+/*Main page*/
+
+.mainpage div.image {
+    background-size: contain;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}
+
+.image.main_death {
+    background-image: url('/static/image/main_death-320.png');
+}
+.image.diffbot {
+    background-image: url('/static/image/diffbot-320.png');
+}
+.image.lifelong {
+    background-image: url('/static/image/lifelong-320.png');
+}
+.image.sponsored {
+    background-image: url('/static/image/sponsored-320.png');
+}
+.image.community {
+    background-image: url('/static/image/community-320.png');
+}
+.image.location {
+    background-image: url('/static/image/location-320.png');
+}
+
+.mainpage .card .content:first-child {
+    flex-grow: 0;
 }

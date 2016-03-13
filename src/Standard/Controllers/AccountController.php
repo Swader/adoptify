@@ -85,18 +85,22 @@ class AccountController extends Controller
             ])) {
                 $this->flasher->error('Invalid password. Changes ignored.');
             } else {
-                $this->user->password = $_POST['password_new'];
-                $this->user->save();
-                $this->flasher->success('Password updated!');
+                if ($this->user->password != $_POST['password']) {
+                    $this->user->password = $_POST['password_new'];
+                    $this->user->save();
+                    $this->flasher->success('Password updated!');
+                }
             }
         }
 
         if ($_POST['firstname'] != '-') {
             try {
-                v::alnum(' ')->check($_POST['firstname']);
-                $this->user->firstName = $_POST['firstname'];
-                $this->user->save();
-                $this->flasher->success('First name changed.');
+                if ($this->user->firstName != $_POST['firstname']) {
+                    v::alnum(' ')->check($_POST['firstname']);
+                    $this->user->firstName = $_POST['firstname'];
+                    $this->user->save();
+                    $this->flasher->success('First name changed.');
+                }
             } catch (ValidationException $e) {
                 $this->flasher->error(
                     'Name contains invalid characters. '.$e->getMainMessage()
@@ -106,10 +110,12 @@ class AccountController extends Controller
 
         if ($_POST['lastname'] != '-') {
             try {
-                v::alnum(' ')->check($_POST['lastname']);
-                $this->user->lastName = $_POST['lastname'];
-                $this->user->save();
-                $this->flasher->success('Last name changed.');
+                if ($this->user->lastName != $_POST['lastname']) {
+                    v::alnum(' ')->check($_POST['lastname']);
+                    $this->user->lastName = $_POST['lastname'];
+                    $this->user->save();
+                    $this->flasher->success('Last name changed.');
+                }
             } catch (ValidationException $e) {
                 $this->flasher->error(
                     'Last name contains invalid characters. '.$e->getMainMessage()

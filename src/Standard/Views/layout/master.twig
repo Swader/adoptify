@@ -3,7 +3,15 @@
 <head>
     {% block head %}
         <link rel="stylesheet" href="/dist/css/app.dev.css"/>
-        <title>{% block title %}{% endblock %} - My Webpage</title>
+        {#The small bit of logic below allows you to define custom sub-titles for pages by defining the title block in child views#}
+        {% set _block = block('title') %}
+        {% set maintitle = "Adoptify.me" %}
+        {% if _block is not empty %}
+            <title>{{ _block|raw }} - {{ maintitle }}</title>
+        {% else %}
+            <title>{{ maintitle }}</title>
+        {% endif %}
+
     {% endblock %}
 </head>
 <body>

@@ -6,8 +6,10 @@ use GuzzleHttp\ClientInterface;
 use Psecio\Gatekeeper\Gatekeeper;
 use SitePoint\Rauth;
 use Tamtamchik\SimpleFlash\Flash;
-use Tamtamchik\SimpleFlash\Templates\Foundation6Template;
 use Tamtamchik\SimpleFlash\Templates\Semantic2Template;
+use Psr\Log\LoggerInterface as Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\BrowserConsoleHandler;
 
 $user = null;
 if (isset($_SESSION['user'])) {
@@ -26,7 +28,8 @@ $shared = [
         'url' => 'http://test.app',
         'sender' => 'skeleton@example.app',
         'replyto' => 'skeleton@example.app',
-        'debug' => (bool)getenv('DEBUG'),
+        'debug' => getenv('DEBUG') === 'true',
+        'env' => getenv('ENVIRONMENT')
     ],
     'user' => $user,
 ];
@@ -127,5 +130,18 @@ return [
 
         // Add cache at some point
         return $rauth;
+    },
+
+    Logger::class => function () use ($shared) {
+        $logger = new \Monolog\Logger('nofwlog');
+
+        $logger->pushHandler(new StreamHandler(__DIR__.'/../logs/all.log'));
+        if ($shared['site']['env'] == 'dev') {
+            $logger->pushHandler(new BrowserConsoleHandler());
+        }
+
+        $logger->info('Logging set up');
+
+        return $logger;
     },
 ];

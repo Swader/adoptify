@@ -24,11 +24,6 @@ class AuthController extends Controller
      */
     private $mailgun_config;
 
-    /**
-     * @Inject("site-config")
-     */
-    private $site_config;
-
     public function __construct(Twig_Environment $twig)
     {
         $this->twig = $twig;

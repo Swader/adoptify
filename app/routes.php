@@ -4,7 +4,6 @@ return [
     // Basic example routes. When controller is used without method (as string),
     // it needs to have a magic __invoke method defined
     ['GET', '/', 'Standard\Controllers\HomeController'],
-    ['GET', '/extra', ['Standard\Controllers\ExtraController', 'indexAction']],
 
     // Authentication routes (sign up / log in)
     ['GET', '/auth', ['Standard\Controllers\AuthController', 'index']],
@@ -33,6 +32,19 @@ return [
 
     ['GET', '/about', ['Standard\Controllers\HomeController', 'about']],
 
-    ['GET', '/static/image/{image}', ['Adoptify\Controllers\ImageController', 'renderImage']]
+    ['GET', '/static/image/{image}', ['Adoptify\Controllers\ImageController', 'renderImage']],
+
+    // User management routes
+    ['GET', '/users', 'Standard\Controllers\UsersController'],
+    ['GET', '/users/add[/{id}]', ['Standard\Controllers\UsersController', 'upsertUser']],
+    ['POST', '/users/add', ['Standard\Controllers\UsersController', 'upsertUserProcess']],
+    ['GET', '/users/groups', ['Standard\Controllers\UsersController', 'listGroups']],
+    ['GET', '/users/groups/add[/{id}]', ['Standard\Controllers\UsersController', 'upsertGroup']],
+    ['POST', '/users/groups/add', ['Standard\Controllers\UsersController', 'upsertGroupProcess']],
+    ['POST', '/users/forcelogin', ['Standard\Controllers\UsersController', 'logInAs']],
+    ['GET', '/users/exitsuper', ['Standard\Controllers\UsersController', 'exitSuper']],
+    ['GET', '/users/delete/{id}', ['Standard\Controllers\UsersController', 'deleteUser']],
+    ['GET', '/users/groups/delete/{id}', ['Standard\Controllers\UsersController', 'deleteGroup']],
+
 
 ];

@@ -29,7 +29,8 @@ $shared = [
         'sender' => 'skeleton@example.app',
         'replyto' => 'skeleton@example.app',
         'debug' => getenv('DEBUG') === 'true',
-        'env' => getenv('ENVIRONMENT')
+        'env' => getenv('ENVIRONMENT'),
+        'root' => __DIR__ . '/..',
     ],
     'user' => $user,
 ];
@@ -46,7 +47,10 @@ return [
     // Configure Twig
     Twig_Environment::class => function (Flash $flash) use ($shared) {
         $loader = new Twig_Loader_Filesystem(
-            __DIR__ . '/../src/Standard/Views'
+            [
+                __DIR__ . '/../src/Standard/Views',
+                __DIR__ . '/../src/Adoptify/Views',
+            ]
         );
 
         $te = new Twig_Environment($loader);
@@ -135,7 +139,7 @@ return [
     Logger::class => function () use ($shared) {
         $logger = new \Monolog\Logger('nofwlog');
 
-        $logger->pushHandler(new StreamHandler(__DIR__.'/../logs/all.log'));
+        $logger->pushHandler(new StreamHandler(__DIR__ . '/../logs/all.log'));
         if ($shared['site']['env'] == 'dev') {
             $logger->pushHandler(new BrowserConsoleHandler());
         }

@@ -12,18 +12,22 @@
     min-height: 700px;
     padding: 1em 0em;
 }
+
 .masthead .logo.item img {
     margin-right: 1em;
 }
+
 .masthead .ui.menu .ui.button {
     margin-left: 0.5em;
 }
+
 .masthead h1.ui.header {
     margin-top: 3em;
     margin-bottom: 0em;
     font-size: 4em;
     font-weight: normal;
 }
+
 .masthead h2 {
     font-size: 1.7em;
     font-weight: normal;
@@ -32,19 +36,24 @@
 .ui.vertical.stripe {
     padding: 8em 0em;
 }
+
 .ui.vertical.stripe h3 {
     font-size: 2em;
 }
+
 .ui.vertical.stripe .button + h3,
 .ui.vertical.stripe p + h3 {
     margin-top: 3em;
 }
+
 .ui.vertical.stripe .floated.image {
     clear: both;
 }
+
 .ui.vertical.stripe p {
     font-size: 1.33em;
 }
+
 .ui.vertical.stripe .horizontal.divider {
     margin: 3em 0em;
 }
@@ -52,6 +61,7 @@
 .quote.stripe.segment {
     padding: 0em;
 }
+
 .quote.stripe.segment .grid .column {
     padding-top: 5em;
     padding-bottom: 5em;
@@ -69,20 +79,25 @@
     .ui.fixed.menu {
         display: none !important;
     }
+
     .secondary.pointing.menu .item,
     .secondary.pointing.menu .menu {
         display: none;
     }
+
     .secondary.pointing.menu .toc.item {
         display: block;
     }
+
     .masthead.segment {
         min-height: 350px;
     }
+
     .masthead h1.ui.header {
         font-size: 2em;
         margin-top: 1.5em;
     }
+
     .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
@@ -117,7 +132,7 @@ footer {
 footer .puppy img {
     border-radius: 100px !important;
     border: 1px solid silver !important;
-    box-shadow: rgba(0,0,0,0.3) 2px 2px 2px ;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
     width: 150px !important;
     height: 150px !important;
 }
@@ -140,7 +155,7 @@ footer .puppy img {
 }
 
 .masthead .ui.text.container {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 0 10px 10px;
 }
@@ -149,98 +164,127 @@ footer .puppy img {
     .masthead.sad00 {
         background-image: url('/static/image/sad01-320.jpeg');
     }
+
     .masthead.sad01 {
         background-image: url('/static/image/sad02-320.jpeg');
     }
+
     .masthead.sad02 {
         background-image: url('/static/image/sad03-320.jpeg');
     }
+
     .masthead.sad03 {
         background-image: url('/static/image/sad04-320.jpeg');
     }
+
     .masthead.sad04 {
         background-image: url('/static/image/sad05-320.jpeg');
     }
+
     .masthead.sad05 {
         background-image: url('/static/image/sad06-320.jpeg');
     }
 }
+
 @media (max-width: 770px) {
     .masthead.sad00 {
         background-image: url('/static/image/sad01-770.jpeg');
     }
+
     .masthead.sad01 {
         background-image: url('/static/image/sad02-770.jpeg');
     }
+
     .masthead.sad02 {
         background-image: url('/static/image/sad03-770.jpeg');
     }
+
     .masthead.sad03 {
         background-image: url('/static/image/sad04-770.jpeg');
     }
+
     .masthead.sad04 {
         background-image: url('/static/image/sad05-770.jpeg');
     }
+
     .masthead.sad05 {
         background-image: url('/static/image/sad06-770.jpeg');
     }
 }
+
 @media (max-width: 992px) {
     .masthead.sad00 {
         background-image: url('/static/image/sad01-992.jpeg');
     }
+
     .masthead.sad01 {
         background-image: url('/static/image/sad02-992.jpeg');
     }
+
     .masthead.sad02 {
         background-image: url('/static/image/sad03-992.jpeg');
     }
+
     .masthead.sad03 {
         background-image: url('/static/image/sad04-992.jpeg');
     }
+
     .masthead.sad04 {
         background-image: url('/static/image/sad05-992.jpeg');
     }
+
     .masthead.sad05 {
         background-image: url('/static/image/sad06-992.jpeg');
     }
 }
+
 @media (max-width: 1280px) {
     .masthead.sad00 {
         background-image: url('/static/image/sad01-1280.jpeg');
     }
+
     .masthead.sad01 {
         background-image: url('/static/image/sad02-1280.jpeg');
     }
+
     .masthead.sad02 {
         background-image: url('/static/image/sad03-1280.jpeg');
     }
+
     .masthead.sad03 {
         background-image: url('/static/image/sad04-1280.jpeg');
     }
+
     .masthead.sad04 {
         background-image: url('/static/image/sad05-1280.jpeg');
     }
+
     .masthead.sad05 {
         background-image: url('/static/image/sad06-1280.jpeg');
     }
 }
+
 @media (max-width: 1920px) {
     .masthead.sad00 {
         background-image: url('/static/image/sad01-1920.jpeg');
     }
+
     .masthead.sad01 {
         background-image: url('/static/image/sad02-1920.jpeg');
     }
+
     .masthead.sad02 {
         background-image: url('/static/image/sad03-1920.jpeg');
     }
+
     .masthead.sad03 {
         background-image: url('/static/image/sad04-1920.jpeg');
     }
+
     .masthead.sad04 {
         background-image: url('/static/image/sad05-1920.jpeg');
     }
+
     .masthead.sad05 {
         background-image: url('/static/image/sad06-1920.jpeg');
     }
@@ -258,22 +302,161 @@ footer .puppy img {
 .image.main_death {
     background-image: url('/static/image/main_death-320.png');
 }
+
 .image.diffbot {
     background-image: url('/static/image/diffbot-320.png');
 }
+
 .image.lifelong {
     background-image: url('/static/image/lifelong-320.png');
 }
+
 .image.sponsored {
     background-image: url('/static/image/sponsored-320.png');
 }
+
 .image.community {
     background-image: url('/static/image/community-320.png');
 }
+
 .image.location {
     background-image: url('/static/image/location-320.png');
 }
 
 .mainpage .card .content:first-child {
     flex-grow: 0;
+}
+
+/*// Button disabling*/
+
+a.disabled {
+    pointer-events: none !important;
+    cursor: default;
+    color: Gray;
+}
+
+/*// Step wizard*/
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs span.round-tab {
+    width: 70px;
+    height: 70px;
+    line-height: 65px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    text-align: center;
+    font-size: 25px;
+}
+
+.nav-tabs span.round-tab i {
+    color: #555555;
+    margin: 0;
+}
+
+.nav-tabs a.disabled span.round-tab i {
+    color: lightgray;
+}
+
+.nav-tabs li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #00b5ad;
+
+}
+
+.nav-tabs li.active span.round-tab i {
+    color: #00b5ad;
+}
+
+.nav-tabs span.round-tab:hover {
+    color: #333;
+    border: 2px solid #333;
+}
+
+.nav-tabs {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-tabs > li {
+    margin-bottom: -1px;
+    display: block;
+    position: relative;
+}
+
+.nav-tabs.nav > li > a {
+    display: block;
+}
+
+.nav-tabs > li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+.nav-tabs li:after {
+    content: " ";
+    position: absolute;
+    left: 35%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+}
+
+.nav-tabs li.active:after {
+    content: " ";
+    position: absolute;
+    left: 35%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #5bc0de;
+}
+
+@media ( max-width: 585px ) {
+    .nav-tabs span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .nav-tabs li.active:after {
+        content: " ";
+        position: absolute;
+        left: 30%;
+    }
+}
+
+.wizard form>.segment {
+    display: none;
+}
+
+.wizard form>.segment.active {
+    display: block;
+}
+
+.wizard form>.segment {
+    margin: 0;
 }

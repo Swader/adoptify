@@ -46,5 +46,8 @@ return [
     ['GET', '/users/delete/{id}', ['Standard\Controllers\UsersController', 'deleteUser']],
     ['GET', '/users/groups/delete/{id}', ['Standard\Controllers\UsersController', 'deleteGroup']],
 
+    // Ad posting routes
+    ['GET', '/post[/{id}]', ['Adoptify\Controllers\PostController', 'upsertPostView']],
+    ['POST', '/post', ['Adoptify\Controllers\PostController', 'upsertPostProcess']],
 
 ];

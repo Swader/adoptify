@@ -8,9 +8,9 @@
         "doctrine/annotations": "^1.2",
         "league/glide": "^1.0",
         "monolog/monolog": "^1.18",
+        "tamtamchik/simple-flash": "^1.1",
 
         "psecio/gatekeeper": "dev-patch-2",
-        "tamtamchik/simple-flash": "dev-master",
         "sitepoint/rauth": "dev-master"
     },
     "require-dev": {

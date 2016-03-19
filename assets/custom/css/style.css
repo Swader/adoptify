@@ -460,3 +460,13 @@ a.disabled {
 .wizard form>.segment {
     margin: 0;
 }
+
+#imagePreview {
+    margin: 0;
+}
+
+.wrap {
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    word-wrap: break-word;      /* IE */
+}

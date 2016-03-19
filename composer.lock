@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03f9c7c312d3d5a8ed64e26ab28021ec",
-    "content-hash": "fcf3483426575b969a78c8a2f48ed34e",
+    "hash": "5609b53a1e7c2ff2d027fe30bbcfeff2",
+    "content-hash": "aab3207b6f9f22280712bcacc002d746",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -575,16 +575,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.19",
+            "version": "1.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "635ee279a522233a567984756bf9da1db243d9bf"
+                "reference": "e87a786e3ae12a25cf78a71bb07b4b384bfaa83a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/635ee279a522233a567984756bf9da1db243d9bf",
-                "reference": "635ee279a522233a567984756bf9da1db243d9bf",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/e87a786e3ae12a25cf78a71bb07b4b384bfaa83a",
+                "reference": "e87a786e3ae12a25cf78a71bb07b4b384bfaa83a",
                 "shasum": ""
             },
             "require": {
@@ -654,7 +654,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-03-12 19:04:33"
+            "time": "2016-03-14 21:54:11"
         },
         {
             "name": "league/glide",
@@ -1250,12 +1250,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sitepoint/Rauth.git",
-                "reference": "48cf0fb5edf41f2deaa3a471039953dd77c193db"
+                "reference": "bb8f12ed37a8bb3df535d745622b8794724227c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sitepoint/Rauth/zipball/48cf0fb5edf41f2deaa3a471039953dd77c193db",
-                "reference": "48cf0fb5edf41f2deaa3a471039953dd77c193db",
+                "url": "https://api.github.com/repos/sitepoint/Rauth/zipball/bb8f12ed37a8bb3df535d745622b8794724227c0",
+                "reference": "bb8f12ed37a8bb3df535d745622b8794724227c0",
                 "shasum": ""
             },
             "require": {
@@ -1299,25 +1299,25 @@
                 "acl",
                 "authorization"
             ],
-            "time": "2016-02-20 19:34:26"
+            "time": "2016-03-15 10:08:53"
         },
         {
             "name": "symfony/config",
-            "version": "v2.8.3",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "0f8f94e6a32b5c480024eed5fa5cbd2790d0ad19"
+                "reference": "79a97025f7bf4bbf8352b5df1905aa136a531066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/0f8f94e6a32b5c480024eed5fa5cbd2790d0ad19",
-                "reference": "0f8f94e6a32b5c480024eed5fa5cbd2790d0ad19",
+                "url": "https://api.github.com/repos/symfony/config/zipball/79a97025f7bf4bbf8352b5df1905aa136a531066",
+                "reference": "79a97025f7bf4bbf8352b5df1905aa136a531066",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
-                "symfony/filesystem": "~2.3|~3.0.0"
+                "php": ">=5.5.9",
+                "symfony/filesystem": "~2.8|~3.0"
             },
             "suggest": {
                 "symfony/yaml": "To use the yaml reference dumper"
@@ -1325,7 +1325,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1352,7 +1352,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2016-02-22 16:12:45"
+            "time": "2016-02-23 15:16:06"
         },
         {
             "name": "symfony/console",
@@ -1622,16 +1622,16 @@
         },
         {
             "name": "tamtamchik/simple-flash",
-            "version": "dev-master",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tamtamchik/simple-flash.git",
-                "reference": "3f52b46e946698894a3af1bf4d453cf46ff551fc"
+                "reference": "5ba0a5ded355402566af2f723479e9ecd06b06a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tamtamchik/simple-flash/zipball/3f52b46e946698894a3af1bf4d453cf46ff551fc",
-                "reference": "3f52b46e946698894a3af1bf4d453cf46ff551fc",
+                "url": "https://api.github.com/repos/tamtamchik/simple-flash/zipball/5ba0a5ded355402566af2f723479e9ecd06b06a2",
+                "reference": "5ba0a5ded355402566af2f723479e9ecd06b06a2",
                 "shasum": ""
             },
             "require": {
@@ -1676,7 +1676,7 @@
                 "messages",
                 "notifications"
             ],
-            "time": "2016-03-13 15:52:19"
+            "time": "2016-03-14 08:19:30"
         },
         {
             "name": "twig/twig",
@@ -1798,12 +1798,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Bee-Lab/bowerphp.git",
-                "reference": "1b9e01a02d5629f9ea9987ccdf59b56bf2106ed9"
+                "reference": "283b455e6cb259f9a67ce7488de2ed166f8b485b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Bee-Lab/bowerphp/zipball/1b9e01a02d5629f9ea9987ccdf59b56bf2106ed9",
-                "reference": "1b9e01a02d5629f9ea9987ccdf59b56bf2106ed9",
+                "url": "https://api.github.com/repos/Bee-Lab/bowerphp/zipball/283b455e6cb259f9a67ce7488de2ed166f8b485b",
+                "reference": "283b455e6cb259f9a67ce7488de2ed166f8b485b",
                 "shasum": ""
             },
             "require": {
@@ -1813,7 +1813,7 @@
                 "knplabs/github-api": "1.4.*",
                 "php": ">=5.3.6",
                 "symfony/console": "~2.3|~3.0",
-                "symfony/filesystem": "~2.3|~3.0",
+                "symfony/filesystem": "~2.4|~3.0",
                 "symfony/finder": "~2.3|~3.0",
                 "symfony/process": "~2.3|~3.0",
                 "vierbergenlars/php-semver": "~3.0"
@@ -1863,7 +1863,7 @@
                 "frontend",
                 "package"
             ],
-            "time": "2016-01-25 11:15:56"
+            "time": "2016-03-16 12:01:12"
         },
         {
             "name": "camspiers/json-pretty",
@@ -1955,22 +1955,22 @@
         },
         {
             "name": "guzzle/guzzle",
-            "version": "v3.9.3",
+            "version": "v3.8.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle3.git",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9"
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "php": ">=5.3.3",
-                "symfony/event-dispatcher": "~2.1"
+                "symfony/event-dispatcher": ">=2.1"
             },
             "replace": {
                 "guzzle/batch": "self.version",
@@ -1997,21 +1997,18 @@
                 "guzzle/stream": "self.version"
             },
             "require-dev": {
-                "doctrine/cache": "~1.3",
-                "monolog/monolog": "~1.0",
+                "doctrine/cache": "*",
+                "monolog/monolog": "1.*",
                 "phpunit/phpunit": "3.7.*",
-                "psr/log": "~1.0",
-                "symfony/class-loader": "~2.1",
-                "zendframework/zend-cache": "2.*,<2.3",
-                "zendframework/zend-log": "2.*,<2.3"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "Guzzle 5 has moved to a new package name. The package you have installed, Guzzle 3, is deprecated."
+                "psr/log": "1.0.*",
+                "symfony/class-loader": "*",
+                "zendframework/zend-cache": "<2.3",
+                "zendframework/zend-log": "<2.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.9-dev"
+                    "dev-master": "3.8-dev"
                 }
             },
             "autoload": {
@@ -2035,7 +2032,7 @@
                     "homepage": "https://github.com/guzzle/guzzle/contributors"
                 }
             ],
-            "description": "PHP HTTP client. This library is deprecated in favor of https://packagist.org/packages/guzzlehttp/guzzle",
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
             "homepage": "http://guzzlephp.org/",
             "keywords": [
                 "client",
@@ -2046,7 +2043,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-03-18 18:23:50"
+            "time": "2014-01-28 22:29:15"
         },
         {
             "name": "henrikbjorn/lurker",
@@ -2054,18 +2051,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/flint/Lurker.git",
-                "reference": "ab45f9cefe600065cc3137a238217598d3a1d062"
+                "reference": "712d3ef19bef161daa2ba0e0237c6b875587a089"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flint/Lurker/zipball/ab45f9cefe600065cc3137a238217598d3a1d062",
-                "reference": "ab45f9cefe600065cc3137a238217598d3a1d062",
+                "url": "https://api.github.com/repos/flint/Lurker/zipball/712d3ef19bef161daa2ba0e0237c6b875587a089",
+                "reference": "712d3ef19bef161daa2ba0e0237c6b875587a089",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "symfony/config": "~2.2",
-                "symfony/event-dispatcher": "~2.2"
+                "symfony/config": "^2.2|^3.0",
+                "symfony/event-dispatcher": "^2.2|^3.0"
             },
             "suggest": {
                 "ext-inotify": ">=0.1.6"
@@ -2105,7 +2102,7 @@
                 "resource",
                 "watching"
             ],
-            "time": "2015-10-27 09:19:19"
+            "time": "2016-03-16 15:22:20"
         },
         {
             "name": "knplabs/github-api",
@@ -2278,16 +2275,16 @@
         },
         {
             "name": "markstory/mini-asset",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markstory/mini-asset.git",
-                "reference": "d69fd1aa3cce8887944f36759970ea0359bdff10"
+                "reference": "2754547822b4e512f1d1f979722ddbd0cca2ffce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markstory/mini-asset/zipball/d69fd1aa3cce8887944f36759970ea0359bdff10",
-                "reference": "d69fd1aa3cce8887944f36759970ea0359bdff10",
+                "url": "https://api.github.com/repos/markstory/mini-asset/zipball/2754547822b4e512f1d1f979722ddbd0cca2ffce",
+                "reference": "2754547822b4e512f1d1f979722ddbd0cca2ffce",
                 "shasum": ""
             },
             "require": {
@@ -2334,7 +2331,7 @@
                 "minifier",
                 "sass"
             ],
-            "time": "2016-01-30 00:42:03"
+            "time": "2016-03-15 01:25:48"
         },
         {
             "name": "natxet/CssMin",
@@ -2433,27 +2430,27 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.3",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "78c468665c9568c3faaa9c416a7134308f2d85c3"
+                "reference": "4dd5df31a28c0f82b41cb1e1599b74b5dcdbdafa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/78c468665c9568c3faaa9c416a7134308f2d85c3",
-                "reference": "78c468665c9568c3faaa9c416a7134308f2d85c3",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/4dd5df31a28c0f82b41cb1e1599b74b5dcdbdafa",
+                "reference": "4dd5df31a28c0f82b41cb1e1599b74b5dcdbdafa",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=5.5.9"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/dependency-injection": "~2.6|~3.0.0",
-                "symfony/expression-language": "~2.6|~3.0.0",
-                "symfony/stopwatch": "~2.3|~3.0.0"
+                "symfony/config": "~2.8|~3.0",
+                "symfony/dependency-injection": "~2.8|~3.0",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/stopwatch": "~2.8|~3.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -2462,7 +2459,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -2489,7 +2486,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-27 05:14:19"
+            "time": "2016-01-27 05:14:46"
         },
         {
             "name": "symfony/finder",
@@ -2709,7 +2706,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "psecio/gatekeeper": 20,
-        "tamtamchik/simple-flash": 20,
         "sitepoint/rauth": 20,
         "beelab/bowerphp": 20,
         "henrikbjorn/lurker": 20

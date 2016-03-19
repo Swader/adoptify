@@ -47,7 +47,9 @@ return [
     ['GET', '/users/groups/delete/{id}', ['Standard\Controllers\UsersController', 'deleteGroup']],
 
     // Ad posting routes
-    ['GET', '/post[/{id}]', ['Adoptify\Controllers\PostController', 'upsertPostView']],
+    ['GET', '/post', ['Adoptify\Controllers\PostController', 'upsertPostView']],
+    ['GET', '/post/view/[/{id}]', ['Adoptify\Controllers\PostController', 'viewPost']],
     ['POST', '/post', ['Adoptify\Controllers\PostController', 'upsertPostProcess']],
+    ['POST', '/post/imageprocess', ['Adoptify\Controllers\ImageApiController', 'imageProcess']],
 
 ];

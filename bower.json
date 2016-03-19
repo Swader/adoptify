@@ -7,6 +7,8 @@
     "private": true,
     "dependencies": {
         "semantic": "*",
-        "jquery.steps": "*"
+        "jquery.steps": "*",
+        "filedrop": "*",
+        "dropzone": "*"
     }
 }

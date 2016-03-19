@@ -4,6 +4,8 @@
 
     {% if (username) %}
 
+        {% include 'partials/dropzonetpl.twig' %}
+
         <ul class="ui nav tabs tabular nav-tabs" role="tablist">
 
             <li role="presentation" class="active item tab">
@@ -87,7 +89,13 @@
                     </div>
                     <div class="segment ui teal" id="step2">
                         <h3 class="ui center header aligned">Upload photos</h3>
-                        <p>About the pet</p>
+                        <p>Upload some photos, then select one as representative. Once we process the photos with the power of
+                            <a href="https://diffbot.com">Diffbot</a>, we'll also suggest some additional information regarding the animal.
+                        </p>
+                        <div class="ui segment dropzone" id="zone">
+                            <h3 class="dz-message">Drag some photos here or click to select them manually</h3>
+                        </div>
+                        <div id="imagePreview" class="ui cards dropzone-previews"></div>
                         <button class="wiznext ui teal button fluid">Proceed</button>
                     </div>
                     <div class="segment ui teal" id="step3">
@@ -98,7 +106,9 @@
                     <div class="segment ui teal" id="complete">
                         <h3 class="ui center header aligned">Preview and confirm!</h3>
                         <p>Here's a preview of your ad!</p>
-                        <button type="submit" class="ui button teal fluid">Confirm</button>
+                        <button type="submit"
+                                class="ui button teal fluid">Confirm
+                        </button>
                     </div>
                 </form>
             </div>

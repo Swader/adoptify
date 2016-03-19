@@ -6,6 +6,9 @@ use GuzzleHttp\ClientInterface;
 use Psecio\Gatekeeper\Gatekeeper;
 use SitePoint\Rauth;
 use Tamtamchik\SimpleFlash\Flash;
+use Tamtamchik\SimpleFlash\FlashInterface;
+use Tamtamchik\SimpleFlash\TemplateFactory;
+use Tamtamchik\SimpleFlash\Templates;
 use Tamtamchik\SimpleFlash\Templates\Semantic2Template;
 use Psr\Log\LoggerInterface as Logger;
 use Monolog\Handler\StreamHandler;
@@ -122,7 +125,7 @@ return [
     },
 
     Flash::class => function () {
-        return new Flash(new Semantic2Template());
+        return new Flash(TemplateFactory::create(Templates::SEMANTIC_2));
     },
 
     'User' => function () use ($shared) {

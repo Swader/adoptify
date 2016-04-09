@@ -2,7 +2,7 @@
 
 namespace Standard\Controllers;
 
-use Psecio\Gatekeeper\UserModel;
+use Adoptify\Entities\User;
 use Standard\Abstracts\Controller;
 use Twig_Environment;
 use Respect\Validation\Validator as v;
@@ -24,8 +24,8 @@ class AccountController extends Controller
     private $twig;
 
     /**
-     * @Inject("User")
-     * @var UserModel
+     * @Inject
+     * @var User
      */
     private $user;
 

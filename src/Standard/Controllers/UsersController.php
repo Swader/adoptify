@@ -2,9 +2,9 @@
 
 namespace Standard\Controllers;
 
+use Adoptify\Entities\User;
 use Psecio\Gatekeeper\Gatekeeper;
 use Psecio\Gatekeeper\GroupCollection;
-use Psecio\Gatekeeper\UserModel;
 use Respect\Validation\Exceptions\ValidationException;
 use Standard\Abstracts\Controller;
 use Twig_Environment;
@@ -24,8 +24,8 @@ class UsersController extends Controller
     private $twig;
 
     /**
-     * @Inject("User")
-     * @var UserModel|null
+     * @Inject
+     * @var User
      */
     private $user;
 

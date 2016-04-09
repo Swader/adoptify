@@ -6,113 +6,45 @@
 
         {% include 'partials/dropzonetpl.twig' %}
 
-        <ul class="ui nav tabs tabular nav-tabs" role="tablist">
+        {% if post is iterable %}
 
-            <li role="presentation" class="active item tab">
-                <a href="#" data-toggle="tab" aria-controls="step1" role="tab"
-                   title="Disclaimer" data-position="bottom center">
-                            <span class="round-tab">
-                                <i class="icon info"></i>
-                            </span>
-                </a>
-            </li>
+            <h3>You have some drafts!</h3>
+            <p>Would you like to continue working on them, or create a new post?</p>
 
-            <li role="presentation" class="item tab">
-                <a href="#" class="disabled" data-toggle="tab"
-                   aria-controls="step2"
-                   role="tab" title="Basic information"
-                   data-position="bottom center">
-                            <span class="round-tab">
-                                <i class="icon photo"></i>
-                            </span>
-                </a>
-            </li>
-            <li role="presentation" class="item tab">
-                <a href="#" class="disabled" data-toggle="tab"
-                   aria-controls="step3"
-                   role="tab" title="Photos" data-position="bottom center">
-                            <span class="round-tab">
-                                <i class="icon pencil"></i>
-                            </span>
-                </a>
-            </li>
+            <div class="ui link cards">
+            {% for p in post %}
 
-            <li role="presentation" class="item tab">
-                <a href="#" class="disabled" data-toggle="tab"
-                   aria-controls="complete" role="tab" title="Confirm creation"
-                   data-position="bottom center">
-                            <span class="round-tab">
-                                <i class="icon check"></i>
-                            </span>
-                </a>
-            </li>
-        </ul>
+                {% include 'post/post_render.twig' %}
 
-        <div class="container wizard">
-            <div class="row">
-                <form action="/post/submit" method="post">
-                    <div class="segment ui teal active" id="step1">
-                        <h3 class="ui center header aligned">Please read before proceeding!</h3>
-                        <div class="ui items">
-                            <div class="item">
-                                <div class="content">
-                                    <div class="ui segment">
-                                        <h4>Rethink the reasons!</h4>
-                                        <div class="description">
-                                            <p>Animals are not toys - you shouldn't throw them away after you're bored with them. Think long and hard about the implications of giving away the memories and experiences you've had together.</p>
-                                        </div>
-                                    </div>
-                                    <div class="ui segment">
-                                        <h4>Destruction? Pooping indoors?</h4>
-                                        <div class="description">
-                                            <p>If your pet is destructive or disobedient, don't try to force them to act the way you want them to. There's a treasure trove of useful information about proper training and housebreaking out there. For example, the most common, inhumane, and by far stupidest mistake people make is rubbing their noses in their business when they poop indoors. There are very effective and humane ways to housetrain an animal, and if something like this is the reason why you're trying to give your pet away, please consider looking at our
-                                                <a href="/training"
-                                                   title="Information about training and houserbreaking pets">training info page </a> instead and giving the little munchkin another chance.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="ui segment">
-                                        <h4>Funding help</h4>
-                                        <div class="description">
-                                            <p>If you can no longer afford to keep the pet fed or medically healthy, but want to keep them, please see our
-                                                <a href="/funding-assist"
-                                                   title="Help with funding a pet's medical and food needs">funding assistance</a> page.
-                                            </p>
-                                            <p>If the reasons above are not why you're forced to give the pet away, please click the "Proceed" button below.</p>
-
-                                        </div>
-                                    </div>
-                                    <button class="wiznext ui teal button fluid">Proceed</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="segment ui teal" id="step2">
-                        <h3 class="ui center header aligned">Upload photos</h3>
-                        <p>Upload some photos, then select one as representative. Once we process the photos with the power of
-                            <a href="https://diffbot.com">Diffbot</a>, we'll also suggest some additional information regarding the animal.
-                        </p>
-                        <div class="ui segment dropzone" id="zone">
-                            <h3 class="dz-message">Drag some photos here or click to select them manually</h3>
-                        </div>
-                        <div id="imagePreview" class="ui cards dropzone-previews"></div>
-                        <button class="wiznext ui teal button fluid">Proceed</button>
-                    </div>
-                    <div class="segment ui teal" id="step3">
-                        <h3 class="ui center header aligned">General information</h3>
-                        <p>General disclaimer</p>
-                        <button class="wiznext ui teal button fluid">Proceed</button>
-                    </div>
-                    <div class="segment ui teal" id="complete">
-                        <h3 class="ui center header aligned">Preview and confirm!</h3>
-                        <p>Here's a preview of your ad!</p>
-                        <button type="submit"
-                                class="ui button teal fluid">Confirm
-                        </button>
-                    </div>
-                </form>
+            {% endfor %}
             </div>
-        </div>
+
+        {% else %}
+
+            {% include 'post/wizard/menu.twig' %}
+
+            <div class="container wizard">
+                <div class="row">
+                    <form action="/post/submit" method="post">
+
+                        {% include 'post/wizard/step1.twig' %}
+                        {% include 'post/wizard/step2.twig' %}
+                        {% include 'post/wizard/step3.twig' %}
+
+                        <div class="segment ui teal" id="complete">
+                            <h3 class="ui center header aligned">Preview and confirm!</h3>
+                            <p>Here's a preview of your ad!</p>
+                            <input type="hidden" name="id"
+                                   value="{{ post.id }}">
+                            <button type="submit"
+                                    class="ui button teal fluid">Confirm
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        {% endif %}
 
     {% else %}
 

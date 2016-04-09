@@ -23,6 +23,7 @@ if ($('.dzcard').length) {
             else { done(); }
         },
         success: function(file, response) {
+            console.log("Single response");
             console.log(response);
             $(file.previewElement).find('.diffbot-info').text("Whatever!");
         },
@@ -34,6 +35,12 @@ if ($('.dzcard').length) {
             // add unique form identifier for ad for every upload
             // add progress indicator for both upload and diffbot processing
             // add deletion from server based on unique ID in the preview elements?
+        },
+        sending: function(file, xhr, formData) {
+            // console.log(file);
+            // console.log(xhr);
+            // console.log(formData);
+            // formData.append("_token", token);
         }
     };
 }

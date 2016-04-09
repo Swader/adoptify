@@ -50,6 +50,6 @@ return [
     ['GET', '/post', ['Adoptify\Controllers\PostController', 'upsertPostView']],
     ['GET', '/post/view/[/{id}]', ['Adoptify\Controllers\PostController', 'viewPost']],
     ['POST', '/post', ['Adoptify\Controllers\PostController', 'upsertPostProcess']],
-    ['POST', '/post/imageprocess', ['Adoptify\Controllers\ImageApiController', 'imageProcess']],
+    ['POST', '/post/imageprocess', ['Adoptify\Controllers\ImageApiController', 'addImageToDraftPostAction']],
 
 ];

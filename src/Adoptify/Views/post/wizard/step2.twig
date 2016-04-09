@@ -1,0 +1,18 @@
+<div class="segment ui teal" id="step2">
+    <h3 class="ui center header aligned">Title</h3>
+    <p>Pick something descriptive but short</p>
+    <div class="ui field input fluid">
+        <input type="text" name="title"
+               value="{{ post.title }}">
+    </div>
+    <h3 class="ui center header aligned">Upload photos</h3>
+    <p>Upload some photos, then select one as representative. Once we process the photos with the power of
+        <a href="https://diffbot.com">Diffbot</a>, we'll also suggest some additional information regarding the animal.
+    </p>
+    <div class="ui segment dropzone" id="zone">
+        <h3 class="dz-message">Drag some photos here or click to select them manually</h3>
+    </div>
+    <div id="imagePreview"
+         class="ui cards dropzone-previews"></div>
+    <button class="wiznext ui teal button fluid">Proceed</button>
+</div>

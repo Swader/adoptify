@@ -1,18 +1,22 @@
 <?php
 
+use Adoptify\Entities\User;
 use function DI\object;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use League\CLImate\Util\Writer\StdOut;
+use Monolog\ErrorHandler;
 use Psecio\Gatekeeper\Gatekeeper;
 use SitePoint\Rauth;
 use Tamtamchik\SimpleFlash\Flash;
-use Tamtamchik\SimpleFlash\FlashInterface;
 use Tamtamchik\SimpleFlash\TemplateFactory;
 use Tamtamchik\SimpleFlash\Templates;
-use Tamtamchik\SimpleFlash\Templates\Semantic2Template;
 use Psr\Log\LoggerInterface as Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\BrowserConsoleHandler;
+
+Gatekeeper::init(__DIR__ . '/../../');
+Gatekeeper::disableThrottle();
 
 $user = null;
 if (isset($_SESSION['user'])) {
@@ -25,34 +29,22 @@ if (isset($_SESSION['user'])) {
     }
 }
 
-$shared = [
-    'site' => [
-        'name' => 'Skeleton',
-        'url' => 'http://test.app',
-        'sender' => 'skeleton@example.app',
-        'replyto' => 'skeleton@example.app',
-        'debug' => getenv('DEBUG') === 'true',
-        'env' => getenv('ENVIRONMENT'),
-        'root' => __DIR__ . '/..',
-    ],
-    'user' => $user,
-];
+$shared = require_once __DIR__ . '/shared/root.php';
+$shared['user'] = $user;
+require_once __DIR__ . '/connections/default.php';
+require_once __DIR__ . '/connections/users.php';
 
 return [
 
-    'mailgun-config' => [
-        'key' => getenv('MAILGUN_KEY'),
-        'domain' => getenv('MAILGUN_DOMAIN'),
-    ],
-
+    'mailgun-config' => $shared['mailgun-config'],
     'site-config' => $shared['site'],
 
     // Configure Twig
     Twig_Environment::class => function (Flash $flash) use ($shared) {
         $loader = new Twig_Loader_Filesystem(
             [
-                __DIR__ . '/../src/Standard/Views',
-                __DIR__ . '/../src/Adoptify/Views',
+                __DIR__ . '/../../src/Standard/Views',
+                __DIR__ . '/../../src/Adoptify/Views',
             ]
         );
 
@@ -62,6 +54,10 @@ return [
 
         if ($shared['user']) {
             $te->addGlobal('username', $shared['user']->username);
+        }
+
+        if (isset($_SESSION['superuser'])) {
+            $te->addGlobal('super', $_SESSION['superuser']);
         }
 
         if ($flash->hasMessages()) {
@@ -98,25 +94,9 @@ return [
         return $te;
     },
 
-    'glide' => function () {
-        $server = League\Glide\ServerFactory::create(
-            [
-                'source' => new League\Flysystem\Filesystem(
-                    new League\Flysystem\Adapter\Local(
-                        __DIR__ . '/../assets/image'
-                    )
-                ),
-                'cache' => new League\Flysystem\Filesystem(
-                    new League\Flysystem\Adapter\Local(
-                        __DIR__ . '/../public/static/image'
-                    )
-                ),
-                'driver' => 'gd',
-            ]
-        );
+    'glide' => require_once __DIR__ . '/shared/glide.php',
 
-        return $server;
-    },
+    'titleGenerator' => require_once __DIR__ . '/shared/titlegen.php',
 
     ClientInterface::class => function () {
         $client = new Client();
@@ -128,8 +108,8 @@ return [
         return new Flash(TemplateFactory::create(Templates::SEMANTIC_2));
     },
 
-    'User' => function () use ($shared) {
-        return $shared['user'];
+    User::class => function () use ($shared) {
+        return ($shared['user']) ? new User($shared['user']) : null;
     },
 
     'rauth' => function () {
@@ -142,10 +122,20 @@ return [
     Logger::class => function () use ($shared) {
         $logger = new \Monolog\Logger('nofwlog');
 
-        $logger->pushHandler(new StreamHandler(__DIR__ . '/../logs/all.log'));
+        $logger->pushHandler(
+            new StreamHandler($shared['site']['logFolder'] . '/all.log')
+        );
+        $logger->pushHandler(
+            new StreamHandler(
+                $shared['site']['logFolder'] . '/error.log',
+                \Monolog\Logger::NOTICE
+            )
+        );
         if ($shared['site']['env'] == 'dev') {
             $logger->pushHandler(new BrowserConsoleHandler());
         }
+
+        ErrorHandler::register($logger);
 
         $logger->info('Logging set up');
 
